@@ -1,4 +1,4 @@
-# VoiceAI PDF Reader & Multilingual Audio Narrator
+# PDF AI Scoper
 
 An AI-powered web application for reading PDF documents, listening to multilingual voice audio dictations, and interacting via context-aware AI document chat. Built for 1-click deployment on **Vercel**.
 

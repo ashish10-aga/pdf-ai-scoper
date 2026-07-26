@@ -50,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <h1 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>
-              PDF Voice Reader
+              PDF AI Scoper
             </h1>
             <span className="badge-clean">Document Mode</span>
           </div>
