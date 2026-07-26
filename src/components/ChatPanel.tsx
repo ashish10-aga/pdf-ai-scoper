@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Mic, MicOff, FileText, User, Volume2, RefreshCw } from 'lucide-react';
 import { PdfDocument, ChatMessage, Language } from '../types/pdf';
-import { chatWithPdf } from '../services/geminiService';
+import { chatWithPdf } from '../services/groqService';
 import { speechService, startVoiceRecognition } from '../services/speechService';
 
 interface ChatPanelProps {

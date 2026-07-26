@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Play, Pause, Square, Volume2, CheckCircle2, FileText, ChevronDown, ChevronUp, FastForward, RefreshCw } from 'lucide-react';
 import { PdfDocument, PdfSummaryResult, Language } from '../types/pdf';
 import { speechService } from '../services/speechService';
-import { generatePdfSummary } from '../services/geminiService';
+import { generatePdfSummary } from '../services/groqService';
 
 interface DictationPanelProps {
   pdf: PdfDocument | null;
@@ -231,7 +231,7 @@ export const DictationPanel: React.FC<DictationPanelProps> = ({
       {loading && (
         <div className="doc-card" style={{ padding: '24px', textAlign: 'center' }}>
           <RefreshCw size={24} color="#475569" style={{ animation: 'spin 1s linear infinite', marginBottom: '8px' }} />
-          <h4 style={{ color: '#0f172a', marginBottom: '2px', fontSize: '0.95rem' }}>Processing Document...</h4>
+          <h4 style={{ color: '#0f172a', marginBottom: '2px', fontSize: '0.95rem' }}>Analyzing Document with Groq AI...</h4>
           <p style={{ color: '#64748b', fontSize: '0.82rem' }}>
             Preparing summary & script in {selectedLanguage.name}
           </p>
