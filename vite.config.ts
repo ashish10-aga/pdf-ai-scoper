@@ -5,16 +5,12 @@ import path from 'path';
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const parentEnv = loadEnv(mode, path.resolve(__dirname, './'), '');
-  const geminiKey =
-    parentEnv.VITE_GEMINI_API_KEY ||
-    parentEnv.GEMINI_API_KEY ||
-    parentEnv.EXPO_PUBLIC_GEMINI_API_KEY ||
-    'AIzaSyCJ1fLhNMyWEIgqoFUZU3u-qJ62l2GXG5k';
+  const groqKey = parentEnv.VITE_GROQ_API_KEY || parentEnv.GROQ_API_KEY || '';
 
   return {
     plugins: [react()],
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(geminiKey),
+      'process.env.GROQ_API_KEY': JSON.stringify(groqKey),
     },
     optimizeDeps: {
       include: ['pdfjs-dist'],
@@ -28,9 +24,6 @@ export default defineConfig(({ mode }) => {
           manualChunks(id) {
             if (id.includes('node_modules/pdfjs-dist')) {
               return 'pdfjs';
-            }
-            if (id.includes('node_modules/@google/genai')) {
-              return 'gemini-sdk';
             }
             if (id.includes('node_modules/lucide-react')) {
               return 'icons';

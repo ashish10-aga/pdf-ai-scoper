@@ -1,6 +1,6 @@
 # PDF AI Scoper
 
-An AI-powered web application for reading PDF documents, listening to multilingual voice audio dictations, and interacting via context-aware AI document chat. Built for 1-click deployment on **Vercel**.
+An AI-powered web application for reading PDF documents, listening to multilingual voice audio dictations, and interacting via context-aware AI document chat. Built for ultra-fast performance and 1-click deployment on **Vercel**.
 
 ## 🌟 Key Features
 - **PDF Canvas Document Viewer**: Canvas-based PDF page rendering with page navigation, zoom controls, and drag-and-drop file support.
@@ -9,14 +9,15 @@ An AI-powered web application for reading PDF documents, listening to multilingu
 - **Instant Client Cache**: Zero-latency in-memory and persistent caching for instant responses on repeat requests.
 - **Document-First UI Design**: Clean paper document workspace theme optimized for desktop and mobile web browsers.
 
-## ⚡ Advanced React Performance & Optimizations
+## ⚡ Advanced React Performance & AI Engine
+- **Ultra-Fast AI Engine**: Powered by **Groq High-Performance Open-Source Models** (`llama-3.3-70b-versatile` / `llama-3.1-8b-instant`) with sub-second response times.
 - **Lazy Loading & Code Splitting**: Utilizing `React.lazy` and `React.Suspense` for modular component loading.
-- **Optimized Bundle Splitting**: Rollup `manualChunks` separation for `pdfjs-dist`, `@google/genai`, and `lucide-react`, reducing initial bundle size to **~13 kB** for lightning-fast cold starts on Vercel.
+- **Optimized Bundle Splitting**: Rollup `manualChunks` separation for `pdfjs-dist`, icons, and React vendor packages (~13 kB initial bundle).
 - **Render Optimizations**: Component memoization (`useCallback`, `useMemo`, `React.memo`) to eliminate unnecessary re-renders.
 
 ## 🚀 Tech Stack
 - **Framework**: React 19 + TypeScript + Vite 6
-- **AI Engine**: Google GenAI SDK (`@google/genai`) with Gemini 2.5/2.0 Flash models & dynamic fallback
+- **AI Engine**: Groq Open-Source Inference API (`llama-3.3-70b-versatile`)
 - **PDF Engine**: `pdfjs-dist`
 - **Speech Engine**: Web Speech API (`speechSynthesis` + `SpeechRecognition`)
 - **Deployment**: Vercel ready (`vercel.json`)
@@ -31,7 +32,7 @@ An AI-powered web application for reading PDF documents, listening to multilingu
 2. **Set Environment Variable**:
    Create a `.env` file in the root directory:
    ```env
-   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   VITE_GROQ_API_KEY=gsk_...
    ```
 
 3. **Start Development Server**:
@@ -48,5 +49,5 @@ An AI-powered web application for reading PDF documents, listening to multilingu
 
 1. Push this repository to GitHub.
 2. Import the repository into your Vercel Dashboard.
-3. Add the Environment Variable `VITE_GEMINI_API_KEY` in Vercel settings.
+3. Add the Environment Variable `VITE_GROQ_API_KEY` in Vercel settings.
 4. Click **Deploy**!

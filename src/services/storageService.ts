@@ -1,4 +1,4 @@
-const API_KEY_STORAGE_KEY = 'GEMINI_API_KEY_WEB_APP';
+const API_KEY_STORAGE_KEY = 'GROQ_API_KEY_WEB_APP';
 
 export function getStoredApiKey(): string | null {
   try {

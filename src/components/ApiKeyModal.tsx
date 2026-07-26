@@ -81,23 +81,23 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ visible, onClose }) =>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
           <Key size={20} color="#1e293b" />
           <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>
-            Gemini API Key Settings
+            Groq API Key Settings
           </h3>
         </div>
 
         <p style={{ fontSize: '0.82rem', color: '#475569', lineHeight: '1.5', marginBottom: '16px' }}>
-          The application automatically uses your Google Gemini API key from the environment (`.env`). If you wish to enter a custom key, you can do so below.
+          The application automatically uses your Groq API key from environment (`.env`). If you wish to use a custom key, enter it below.
         </p>
 
         <div style={{ marginBottom: '16px' }}>
           <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#334155', marginBottom: '6px' }}>
-            GEMINI API KEY (`AIzaSy...`)
+            GROQ API KEY (`gsk_...`)
           </label>
           <input
             type="password"
             value={keyInput}
             onChange={(e) => setKeyInput(e.target.value)}
-            placeholder="AIzaSy..."
+            placeholder="gsk_..."
             style={{
               width: '100%',
               background: '#f8fafc',
