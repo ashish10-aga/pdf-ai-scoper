@@ -1,0 +1,30 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# build & output
+dist/
+web-build/
+
+# Environment files
+.env
+.env*
+!.env.example
+
+# Temporary & IDE
+.artifacts/
+.gradle_home/
+.idea/
+.vscode/
+.expo/
+.DS_Store
+*.pem
+
+# Metro & debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# typescript
+*.tsbuildinfo
