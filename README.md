@@ -32,7 +32,7 @@ An AI-powered web application for reading PDF documents, listening to multilingu
 2. **Set Environment Variable**:
    Create a `.env` file in the root directory:
    ```env
-   VITE_GROQ_API_KEY=gsk_...
+   VITE_GROQ_API_KEY=gsk_...(or any API key of your choice)
    ```
 
 3. **Start Development Server**:
